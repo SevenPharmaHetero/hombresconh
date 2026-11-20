@@ -528,7 +528,7 @@
       const up = await sb.storage.from(BUCKET).upload(path, file, { contentType: file.type, upsert: false, cacheControl: "3600" });
       if (up.error) throw up.error;
 
-      const { error } = await sb.from("profesionales").insert({
+      const { error } = await sb.from("respuestas_formulario").insert({
         id,
         nombre_completo: nombre,
         especialidad: espSel,
